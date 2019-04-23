@@ -144,6 +144,9 @@ module Peddler
 
     def build_options
       opts = defaults.merge(query: operation, headers: headers)
+
+      puts opts.inspect
+
       body ? opts.update(body: body) : opts
     end
 
