@@ -111,6 +111,9 @@ module Peddler
     # @api private
     def run
       opts = build_options
+
+      puts opts.inspect
+
       opts.store(:response_block, Proc.new) if block_given?
       res = post(opts)
       self.body = nil if res.status == 200
