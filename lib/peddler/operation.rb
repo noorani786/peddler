@@ -15,6 +15,9 @@ module Peddler
 
     def structure!(*list_keys)
       list_key = list_keys.shift
+
+      puts "list_key: #{list_key.inspect}"
+
       keys
         .find_all { |key| key.end_with?(list_key) }
         .each do |found_key|

@@ -145,7 +145,8 @@ module Peddler
     def build_options
       opts = defaults.merge(query: operation, headers: headers)
 
-      puts opts.inspect
+      # puts "opts is: #{opts.inspect}"
+      # Rails.logger.info "opts: #{opts.inspect}"
 
       body ? opts.update(body: body) : opts
     end
